@@ -89,11 +89,14 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
+      - name: raw_restaurants
+        description: Raw restaurant data loaded from NYC Open Data
+        database: samanthaq-cis-9440-s26
+        schema: nyc_hw3_raw_data
+        tables:
       - name: source_nyc_open_restaurant_apps
         description: |
           NYC Open Restaurant Applications (Historic).
-          Applications from food service establishments seeking authorization
-          to place outdoor seating on the sidewalk and/or roadway.
           One row per application submission.
         columns:
           - name: objectid
