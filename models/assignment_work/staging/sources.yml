@@ -89,6 +89,83 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
-
-
-
+      - name: source_nyc_open_restaurant_apps
+        description: |
+          NYC Open Restaurant Applications (Historic).
+          Applications from food service establishments seeking authorization
+          to place outdoor seating on the sidewalk and/or roadway.
+          One row per application submission.
+        columns:
+          - name: objectid
+            description: Unique ID for the restaurant application record
+            tests:
+              - unique
+              - not_null
+          - name: globalid
+            description: Global unique identifier (GUID) for the record
+          - name: time_of_submission
+            description: Date and time the application was submitted
+          - name: restaurant_name
+            description: Name of the restaurant
+          - name: doing_business_as_dba
+            description: Doing Business As (DBA) name of the establishment
+          - name: business_address
+            description: Street address of the restaurant business
+          - name: borough
+            description: NYC borough where the restaurant is located
+          - name: zip
+            description: ZIP code of the restaurant location
+          - name: seating_interest_sidewalk
+            description: 'Type of seating interest requested (sidewalk, roadway, or both)'
+          - name: approved_for_sidewalk_seating
+            description: Whether the application was approved for sidewalk seating
+          - name: approved_for_roadway_seating
+            description: Whether the application was approved for roadway seating
+          - name: sidewalk_dimensions_length
+            description: Length of the requested sidewalk seating area in feet
+          - name: sidewalk_dimensions_width
+            description: Width of the requested sidewalk seating area in feet
+          - name: sidewalk_dimensions_area
+            description: Total area of the requested sidewalk seating space in square feet
+          - name: roadway_dimensions_length
+            description: Length of the requested roadway seating area in feet
+          - name: roadway_dimensions_width
+            description: Width of the requested roadway seating area in feet
+          - name: roadway_dimensions_area
+            description: Total area of the requested roadway seating space in square feet
+          - name: latitude
+            description: Latitude coordinate of the restaurant location
+          - name: longitude
+            description: Longitude coordinate of the restaurant location
+          - name: bbl
+            description: Borough Block and Lot number (NYC tax lot identifier)
+          - name: bin
+            description: Building Identification Number assigned by NYC
+          - name: bulding_number
+            description: Building number of the restaurant address (note - typo in source data)
+          - name: census_tract
+            description: Census tract number for the restaurant location
+          - name: community_board
+            description: NYC Community Board district number for the restaurant location
+          - name: council_district
+            description: NYC City Council district number for the restaurant location
+          - name: food_service_establishment
+            description: NYC Health Department Food Service Establishment permit number
+          - name: healthcompliance_terms
+            description: Health compliance terms acknowledgment by the applicant
+          - name: landmark_district_or_building
+            description: Whether the location is in a landmark district or is a landmark building
+          - name: landmarkdistrict_terms
+            description: Terms acknowledgment for landmark district requirements
+          - name: legal_business_name
+            description: Legal registered business name of the establishment
+          - name: nta
+            description: Neighborhood Tabulation Area code and name
+          - name: qualify_alcohol
+            description: Whether the establishment qualifies to serve alcohol outdoors
+          - name: sla_license_type
+            description: Type of State Liquor Authority (SLA) license held
+          - name: sla_serial_number
+            description: State Liquor Authority (SLA) serial/license number
+          - name: street
+            description: Street name of the restaurant address
