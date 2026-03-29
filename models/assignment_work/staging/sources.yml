@@ -3,7 +3,7 @@ sources:
   - name: raw
     description: Raw data loaded from NYC Open Data
     database: samanthaq-cis-9440-s26
-    schema: nyc_311_raw_data 
+    schema: nyc_311_raw_data
     tables:
       - name: source_dot_service_requests_history
         description: |
@@ -89,11 +89,12 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
-      - name: raw_restaurants
-        description: Raw restaurant data loaded from NYC Open Data
-        database: samanthaq-cis-9440-s26
-        schema: nyc_hw3_raw_data
-        tables:
+
+  - name: raw_restaurants
+    description: Raw restaurant data loaded from NYC Open Data
+    database: samanthaq-cis-9440-s26
+    schema: nyc_hw3_raw_data
+    tables:
       - name: source_nyc_open_restaurant_apps
         description: |
           NYC Open Restaurant Applications (Historic).
@@ -145,7 +146,7 @@ sources:
           - name: bin
             description: Building Identification Number assigned by NYC
           - name: bulding_number
-            description: Building number of the restaurant address (note - typo in source data)
+            description: Building number of the restaurant address (typo in source data)
           - name: census_tract
             description: Census tract number for the restaurant location
           - name: community_board
